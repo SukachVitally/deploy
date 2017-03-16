@@ -22,6 +22,7 @@ RUN apt-get install -y nginx
 ADD nginx.conf /etc/nginx/sites-available/default
 EXPOSE 80
 EXPOSE 9000
+EXPOSE 2376
 COPY docker-entrypoint.sh /opt/app/docker-entrypoint.sh
 RUN chmod a+x /opt/app/docker-entrypoint.sh
 WORKDIR "/code"
