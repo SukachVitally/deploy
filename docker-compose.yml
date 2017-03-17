@@ -11,6 +11,16 @@ services:
       PGDATA: /var/lib/postgresql/data
     volumes:
       - ./db:/var/lib/postgresql/data
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
   web:
     build: ./web
     ports:
@@ -26,3 +36,4 @@ services:
     depends_on:
       - db
       - redis
+      - rabbitmq

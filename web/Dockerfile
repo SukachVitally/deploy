@@ -14,6 +14,7 @@ RUN apt-get -y install php7.0 \
       php7.0-mbstring \
       php7.0-pgsql \
       php7.0-curl \
+      php7.0-bcmath \
       php-xdebug
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ \
