@@ -29,7 +29,7 @@ services:
       - "2376:2376"
     environment:
         SSH_AUTH_SOCK: /tmp/agent.sock
-        XDEBUG_CONFIG: remote_host=10.0.1.152
+        XDEBUG_CONFIG: idekey=PHPSTORM
     volumes:
       - ../project:/code
       - $SSH_AUTH_SOCK:/tmp/agent.sock
