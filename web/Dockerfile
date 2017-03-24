@@ -15,7 +15,8 @@ RUN apt-get -y install php7.0 \
     php7.0-pgsql \
     php7.0-curl \
     php7.0-bcmath \
-    php-xdebug
+    php-xdebug \
+    phpunit
 
 RUN echo "xdebug.remote_enable=on" >> /etc/php/7.0/fpm/conf.d/20-xdebug.ini \
     && echo "xdebug.remote_autostart=off" >>  /etc/php/7.0/fpm/conf.d/20-xdebug.ini
