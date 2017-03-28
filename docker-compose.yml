@@ -25,11 +25,11 @@ services:
     build: ./web
     ports:
       - "8080:80"
-      - "9000:9000"
+    #   - "9000:9000"
       - "2376:2376"
     environment:
         SSH_AUTH_SOCK: /tmp/agent.sock
-        XDEBUG_CONFIG: idekey=PHPSTORM
+        XDEBUG_CONFIG: remote_host=10.254.254.67
     volumes:
       - ../project:/code
       - $SSH_AUTH_SOCK:/tmp/agent.sock
