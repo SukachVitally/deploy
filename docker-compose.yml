@@ -33,6 +33,7 @@ services:
     volumes:
       - ../project:/code
       - $SSH_AUTH_SOCK:/tmp/agent.sock
+      - $HOME/.ssh:/root/.ssh
     depends_on:
       - db
       - redis
