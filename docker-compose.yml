@@ -32,6 +32,7 @@ services:
         XDEBUG_CONFIG: remote_host=10.254.254.67
     volumes:
       - ../project:/code
+      - ../keys/:/keys
       - $SSH_AUTH_SOCK:/tmp/agent.sock
       - $HOME/.ssh:/root/.ssh
     depends_on:
