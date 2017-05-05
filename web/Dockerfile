@@ -5,7 +5,6 @@ RUN apt-get -y install ruby-dev
 RUN gem install bundler
 RUN gem install capistrano -v 3.7.2
 RUN gem install capistrano-composer
-
 RUN apt-get -y install php7.0 \
     php7.0-opcache \
     php7.0-fpm \
@@ -16,7 +15,8 @@ RUN apt-get -y install php7.0 \
     php7.0-curl \
     php7.0-bcmath \
     php-xdebug \
-    phpunit
+    phpunit \
+    php-apcu
 
 RUN echo "xdebug.remote_enable=on" >> /etc/php/7.0/fpm/conf.d/20-xdebug.ini \
     && echo "xdebug.remote_autostart=off" >>  /etc/php/7.0/fpm/conf.d/20-xdebug.ini
