@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 RUN apt-get -y update
 RUN apt-get -y install git libpq-dev postgresql-client curl
+RUN apt-get -y install htop vim mc
 RUN apt-get -y install ruby-dev
 RUN gem install bundler
 RUN gem install capistrano -v 3.7.2
